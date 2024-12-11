@@ -10,42 +10,38 @@
 <body>
     <header>
         <nav>
-            <img src="#" alt="placeholder">
+            <img src="./assets/css/logo.png" alt="placeholder">
             <h1>Only The Classics</h1>
-            <a href="javascript:history.back()">Back</a>
+            <button id="back">Back</button>
         </nav>
     </header>
     <main>
-        <adide class="container-leader">
-            <h2>Leader Board</h2>
-            <h3>Top Players</h3>
-            <ol id ="leaderbaord">
-                <!-- leaderboard will show here -->
-            </ol>
-        </adide>
+        <aside class="score-container">
+            <h2>Score Board</h2>
+            <ul id ="scoreboard">
+                <li id="score1"></li>
+                <li id="score2"></li>
+            </ul>
+        </aside>
 
-        <section>
+        <section class="game-container">
             <h2>TIC TAC TOE</h2>
-            <div>
-                <input type="text" id="player1name" placeholder="Player 1">
-                <input type="text" id="player2name" placeholder="Player 2">
-                <p>
+            <div class = "players">
+                <input type="text" id="player1Name" placeholder="Enter Player 1 Name">
+                <input type="text" id="player2Name" placeholder="Enter Player 2 Name">
+                <button id="startGame">Start Game</button>
+                <p id="error"></p>
+
+                <p id="currentPlayerName">
                     <!-- The player's name and who starts first shows here -->
                 </p>
             </div>
             
-            <div id="board" class="board">
-                <!-- The game -->
+            <div id="gameUI">
+                <div id="board" class="board">
+                        <!-- The game -->
+                </div> 
             </div>
-
-            <div class="modal">
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                  <!-- Modal placeholder -->
-                </div>
-                <button class="modal-close is-large" aria-label="close"></button>
-              </div>
-        </section>
 
     </main>
     <footer>
@@ -56,5 +52,7 @@
             <p>SLY</p>  
             <P>Christopher Williams</P>
     </footer>
+
+    <script src="./assets/js/tictactoe.js"></script>
 </body>
 </html>
