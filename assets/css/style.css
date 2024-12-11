@@ -1,17 +1,54 @@
 body {
-background-color: rgb(36, 161, 22);
+background-color: #f3b87b
 
 }
+
+
 
 
 h1 {
     text-align: center;
-    color: rgb(49, 107, 11);
+    font-size: 8rem ;
+    
+    color: #bb6c5d;
     
 }
 
+ h2{
+    text-align: center;
+    color: #bb6c5d;
+    font-weight: 100;
+    font-size: 7rem;
+
+}
+
+h3{
+    text-align: center;
+    color: #344126;
+    font-weight: 100;
+    font-size: 5rem;
+
+}
+
+nav {
+    background-color: #bb6c5d;
+    text-align: right;
+}
+
+.navbar-item {
+    font-size: 5rem;
+    text-align: right;
+    color: #344126;
+}
+
+p {
+    font-size: 2.5rem
+}
+
+
 section{
-    text-align: left;
+    text-align: center;
+    color: #344126;
 
 }
 
