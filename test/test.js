@@ -5,8 +5,8 @@ const boardElement = document.getElementById("board");
 const currentPlayerNameElement = document.getElementById("currentPlayerName");
 const score1Element = document.getElementById("score1");
 const score2Element = document.getElementById("score2");
-const errorElement = document.getElementById("error");
-const startGameElement = document.getElementById("startGame")
+const winnerMessageElement = document.getElementById("winnerMessage");
+const nextRoundBtn = document.getElementById("nextRoundBtn");
 
 function startGame() {
     player1Name = document.getElementById('player1Name').value;
@@ -20,7 +20,7 @@ function startGame() {
         currentPlayerNameElement.textContent = currentPlayer;
         gameActive = true;
     } else {
-       errorElement.textContent = "Please enter names for both players.";
+        alert("Please enter names for both players.");
     }
 }
 
@@ -99,9 +99,3 @@ function nextRound() {
     initializeBoard();
     gameActive = true;
 }
-
-
-startGameElement.addEventListener('click', function(event) {
-    event.preventDefault();
-    startGame();
-}) 
