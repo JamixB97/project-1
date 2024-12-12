@@ -32,13 +32,20 @@ h3{
 
 nav {
     background-color: #bb6c5d;
-    text-align: right;
+    
+    
 }
 
 .navbar-item {
     font-size: 5rem;
     text-align: right;
     color: #344126;
+}
+
+.row-toggle {
+  float: right;
+  color: #344126;
+
 }
 
 p {
@@ -52,10 +59,7 @@ section{
 
 }
 
-img.resize {
-    width:20px;
-    height: 20px;
-}
+
 
 
 footer {
