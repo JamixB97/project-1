@@ -32,13 +32,10 @@
                 <input type="text" id="player2Name" placeholder="Enter Player 2 Name">
                 <button id="startGame">Start Game</button>
                 <p id="error"></p>
-
-                <p id="currentPlayerName">
-                    <!-- The player's name and who starts first shows here -->
-                </p>
             </div>
             
-            <div id="gameUI">
+            <div id="gameUI" style="display:none">
+                <h2>It's <span id="currentPlayerName"></span>'s turn</h2>
                 <div id="board" class="board">
                         <!-- The game -->
                 </div> 
@@ -54,6 +51,13 @@
             <P>Christopher Williams</P>
     </footer>
 
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="modal">
+            <h2 id="modal-message"></h2>
+            <button onclick="closeModal()">Play Again</button>
+        </div>
+
     <script src="./assets/js/tictactoe.js"></script>
+    <script src="./assets/js/logic.js"></script>
 </body>
 </html>
