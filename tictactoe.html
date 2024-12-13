@@ -3,27 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/tictactoe.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
     <title>Tic Tac Toe</title>
 </head>
 <body>
     <header>
+        <h1>ONLY THE CLASSICS</h1> 
         <nav>
-            <img src="./assets/css/logo.png" alt="placeholder">
-            <h1>Only The Classics</h1>
-            <button id="back">Back</button>
-        </nav>
+
+        
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class= "navbar-start"><img src="./assets/css/images/file.png" id=logo alt="Tri logo" /> </div>
+                <div class="navbar-end">
+                    
+                    <a class="navbar-item">
+                        Home
+                    </a>
+    
+                    <a class="navbar-item">
+                        Tic-Tac-Toe
+                    </a>
+    
+                    <a class="navbar-item">
+                        Hangman
+                    </a>
+    
+                    <a class="navbar-item">
+                        Checkers
+                    </a>
+                    </div>
+    
+                </div>
+            </div>
+        </nav><br> <br> <br> <br> <br>
     </header>
     <main>
-        <aside class="score-container">
-            <h2>Score Board</h2>
-            <ul id ="scoreboard">
-                <li id="score1"></li>
-                <li id="score2"></li>
-            </ul>
-        </aside>
 
         <section class="game-container">
             <h2>TIC TAC TOE</h2>
@@ -41,14 +57,32 @@
                 </div> 
             </div>
 
-    </main>
-    <footer>
-        <div class="">
-            <h3>About Us</h3>
-            <p>James Boulden</p>
-            <p>Pedro Quintero</p>
-            <p>SLY</p>  
-            <P>Christopher Williams</P>
+            <aside class="score-container">
+                <h2>Score Board</h2>
+                <ul id ="scoreboard">
+                    <li id="score1"></li>
+                    <li id="score2"></li>
+                </ul>
+            </aside>
+
+    </main> <br><br><br><br><br><br>
+    <footer class="">
+        <nav class="">
+            <section class="">
+                <div class="">
+                    <h3>Only the Classics</h3>
+                    <p>Created for retro lovers</p>
+
+                <div class="">
+                    <h3>Creators</h3>
+                    <p>James Boulden</p>
+                    <p>SLY</p>
+                    <P>Christopher Williams</P>
+                    <p>Pedro Quintero</p>
+
+                </div>
+            </section>
+        </nav>
     </footer>
 
     <div class="modal-overlay" id="modal-overlay">
