@@ -6,7 +6,8 @@ const currentPlayerNameElement = document.getElementById("currentPlayerName");
 const score1Element = document.getElementById("score1");
 const score2Element = document.getElementById("score2");
 const errorElement = document.getElementById("error");
-const startGameElement = document.getElementById("startGame")
+const startGameElement = document.getElementById("startGame");
+
 
 function startGame() {
     player1Name = document.getElementById('player1Name').value;
@@ -30,6 +31,7 @@ function initializeBoard() {
     for (let i = 0; i < 9; i++) {
         const button = document.createElement('button');
         button.setAttribute('data-index', i);
+        button.classList.add('board-button');
         button.addEventListener('click', handleMove);
         boardElement.appendChild(button);
     }
@@ -76,32 +78,32 @@ function checkForWinner() {
     }
 }
 
-function gameOver(winner) {
-    gameActive = false;
-    if (winner === 'X') {
-        player1Score++;
-        winnerMessageElement.textContent = `${player1Name} wins!`;
-    } else if (winner === 'O') {
-        player2Score++;
-        winnerMessageElement.textContent = `${player2Name} wins!`;
-    } else {
-        winnerMessageElement.textContent = 'It\'s a tie!';
-    }
-    winnerMessageElement.style.display = 'block';
-    score1Element.textContent = player1Score;
-    score2Element.textContent = player2Score;
-    nextRoundBtn.style.display = 'block';
-}
-
-function nextRound() {
-    winnerMessageElement.style.display = 'none';
-    nextRoundBtn.style.display = 'none';
-    initializeBoard();
-    gameActive = true;
-}
-
-
 startGameElement.addEventListener('click', function(event) {
     event.preventDefault();
     startGame();
 }) 
+
+function gameOver(winner) {
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalMessage = document.getElementById('modal-message');
+    // Set the game state and message based on the winner
+    if (winner === 'X') {
+        player1Score++;
+        modalMessage.textContent = `${player1Name} wins!`;
+    } else if (winner === 'O') {
+        player2Score++;
+        modalMessage.textContent = `${player2Name} wins!`;
+    } else {
+        modalMessage.textContent = 'It\'s a tie!';
+    }
+    // Show the modal
+    modalOverlay.style.display = 'flex';
+    score1Element.textContent = `${player1Name}'s score: ${player1Score}`;
+    score2Element.textContent = `${player2Name}'s score: ${player2Score}`;
+}
+function closeModal() {
+    const modalOverlay = document.getElementById('modal-overlay');
+    modalOverlay.style.display = 'none';
+    initializeBoard();
+    gameActive = true; // Optionally reset game state
+}

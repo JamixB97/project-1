@@ -14,7 +14,6 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 350px;
 }
 
 h1 {
@@ -52,7 +51,7 @@ button:hover {
 .board button {
   padding: 40px;
   font-size: 24px;
-  background-color: #f0f0f0;
+  background-color: #000000;
   border: 1px solid #ccc;
   cursor: pointer;
   border-radius: 4px;
@@ -60,8 +59,10 @@ button:hover {
 }
 
 .board button:hover {
-  background-color: #ddd;
+  background-color: #62d6bd;
 }
+
+.board
 
 #nextRoundBtn {
   margin-top: 20px;
@@ -69,4 +70,56 @@ button:hover {
 
 p {
   font-size: 18px;
+}
+
+#boardElement {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+}
+
+.board-button {
+  width: 100px;
+  height: 100px;
+}
+
+.board-button:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+.modal h2 {
+  margin: 0 0 15px;
+}
+.modal button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal button:hover {
+  background-color: #0056B3;
 }
