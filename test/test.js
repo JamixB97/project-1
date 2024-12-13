@@ -99,3 +99,4 @@ function nextRound() {
     initializeBoard();
     gameActive = true;
 }
+

@@ -1,101 +1,125 @@
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body {
-    background-color: #156492;
-    font-family: "Gotham", sans-serif;
-  }
-  
-  h1 {
-    font-family: "Lobster", serif;
-  }
-  
-  .message {
-    color: #fff;
-    font-size: 1.5rem;
-    padding-bottom: 1rem;
-  }
-  
-  form {
-    label {
-      font-size: 4rem;
-      font-weight: bold;
-      vertical-align: middle;
-    }
-    input[type=radio] {
-      margin: 1rem;
-      cursor: pointer;
-    }
-    fieldset {
-      display: block;
-      opacity: 1;
-      transition: all ease 1s;  
-    }
-    &.game-on fieldset {
-      opacity: 0;
-      display: none;
-    }    
-    &.game-on button {
-      opacity: 1;
-      display: block;
-      margin: 0 auto;
-    }
-   
-  }
-  
-  #grid-section {
-    margin: 3rem 0;
-  }
-  
-  #grid {
-    width: 30rem;
-    margin: 0 auto;
-  }
-  
-  li {
-    border: 1px solid #000;
-    width: 10rem;
-    height: 10rem;
-    display: block;
-    float: left;
-    font-size: 3em;
-    text-align: center;
-    padding: .5em;
-  }
-  
-  #c1, #c2, #c3 {
-    border-top: none;
-  }
-  
-  #c3, #c6, #c9 {
-    border-right: none;
-  }
-  
-  #c7, #c8, #c9 {
-    border-bottom: none;
-  }
-  
-  #c1, #c4, #c7 {
-    border-left: none;
-  }
-  
-  .winner {
-    color: #9AE1E5;
-  }
-  
-  .btn-primary, 
-  .btn-primary:focus {
-    background-color: #33B7A5;
-    opacity: 0;
-    outline: 0;  
-    transition: all ease .3s;
-  }
-  
-  .btn-primary:hover {
-    background-color: #53041f;
-  }
-  
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game-container {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  margin: 10px 5px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.board button {
+  padding: 40px;
+  font-size: 24px;
+  background-color: #000000;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.board button:hover {
+  background-color: #62d6bd;
+}
+
+.board
+
+#nextRoundBtn {
+  margin-top: 20px;
+}
+
+p {
+  font-size: 18px;
+}
+
+#boardElement {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+}
+
+.board-button {
+  width: 100px;
+  height: 100px;
+}
+
+.board-button:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+.modal h2 {
+  margin: 0 0 15px;
+}
+.modal button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal button:hover {
+  background-color: #0056B3;
+}
