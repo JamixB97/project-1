@@ -19,13 +19,13 @@
 
 
 
-    <nav>
+    <nav> 
+        <!-- nav bar details -->
 
-
-
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <img src="./assets/css/images/file.png" id=logo alt="Tri logo" />
+        <div id="navbarBasicExample" class="navbar-end">
+            <div class="navbar-start"><img src="./assets/css/images/file.png" id=logo alt="Tri logo" /> </div>
+            <div class="navbar-end">
+                
                 <a class="navbar-item">
                     Home
                 </a>
@@ -42,40 +42,13 @@
                     Checkers
                 </a>
                 </div>
-                <div class="navbar-end">
-
-                <switch class="row-toggle">
-                    <div class="col">
-                        <p>DARK MODE</p>
-                    </div>
-                    <label class="switch col">
-                        <input type="checkbox" id="theme-switcher">
-                        <span class="slider round"></span>
-                    </label>
-                    <div class="col">
-                        <p>LIGHT MODE</p>
-                    </div>
-                </switch>
-                </div>
             </div>
-        </div>
-  <!--dark/light switch-->
-       
 
-
-
-        </div>
     </nav> <br> <br> <br> <br> <br>
   
-
-
-    </nav>
-
-
-
-
     <main>
-<aside>
+        <aside>
+
         <section class="container">
             <div class="row">
                 <div class="col-4">
@@ -86,29 +59,29 @@
                 <h3>Play Tic-Tac-Toe</h3>
                 <p>Play the classic game of Tic-Tac-Toe. Click on the grid to place your X or O. Get three in a row
                     to win!</p>
-                <div class="skeleton-block"></div>
+                    <img src="./assets/css/images/maintictac.jpg" id=tictactoe alt="tictactoe logo" />
             </div>
             <br><br>
 
             <div class="col-4">
-                <h3>Play Hangman</h3>
-                <p>Play the classic game of Hangman. Guess the word</p>
-                <div class="skeleton-block"></div>
+                 <h3>Play Hangman</h3>
+                    <p>Play the classic game of Hangman. Guess the word</p>
+                    <img src="./assets/css/images/hangman.jpeg" id=hangman alt="hangman logo" />
             </div> <br><br>
 
             <div class="col-4">
                 <h3>Play Checkers</h3>
                 <p> Can you beat the computer?</p>
-                <div class="skeleton-block">
-                    We are working on bringing this game back, pardon our dust while we work on it.
-                  </div>
+                <img src="./assets/css/images/checkers.jpeg" id=checkers alt="checkers logo" />
             </div> <br><br>
             </div>
+            </div> <br><br>
+           
 
 
         </section>
 
-</aside>
+        </aside>
 
 
 
@@ -125,13 +98,12 @@
                     <h3>Only the Classics</h3>
                     <p>Created for retro lovers</p>
 
-                <div class="">
-                    <h3>Creators</h3>
-                    <p>James Boulden</p>
-                    <p>SLY</p>
-                    <P>Christopher Williams</P>
-                    <p>Pedro Quintero</p>
-
+                    <div class="">
+                        <h3>Creators</h3>
+                        <p>James Boulden</p>
+                        <p>SLY</p>
+                        <P>Christopher Williams</P>
+                        <p>Pedro Quintero</p>
                 </div>
             </section>
         </nav>
@@ -140,3 +112,18 @@
 </body>
 
 </html>
+
+<!-- code for on and off switch temporarly out of the nav bar for formatting -->
+
+<switch class="row-toggle">
+    <div class="col">
+        <p>DARK MODE</p>
+    </div>
+    <label class="switch col">
+        <input type="checkbox" id="theme-switcher">
+        <span class="slider round"></span>
+    </label>
+    <div class="col">
+        <p>LIGHT MODE</p>
+    </div>
+</switch>
