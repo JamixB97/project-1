@@ -1,11 +1,59 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  display: flex;
+  background-color: #f3b87b;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: right;
+  padding: 10px 20px;
+  background-color: #bb6c5d;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-item {
+  font-size: 5rem;
+  text-align: right;
+  color: #344126;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff9800;
+}
+
+.score-container {
+  background: #344126;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #fff;
+  width: 200px;
+  text-align: center;
 }
 
 .game-container {
@@ -14,10 +62,34 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 640px;
+  height: 640 px;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-  font-size: 24px;
+  text-align: center;
+  font-size: 8rem ;
+  
+  color: #bb6c5d;
+  
+}
+
+h2{
+  text-align: center;
+  color: #bb6c5d;
+  font-weight: 100;
+  font-size: 7rem;
+
+}
+
+h3{
+  text-align: center;
+  color: #344126;
+  font-weight: 100;
+  font-size: 5rem;
+
 }
 
 input[type="text"] {
@@ -30,15 +102,15 @@ input[type="text"] {
 
 button {
   padding: 10px;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #f3b87b;
+  color: #344126;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #2d2506;
 }
 
 .board {
@@ -62,8 +134,6 @@ button:hover {
   background-color: #62d6bd;
 }
 
-.board
-
 #nextRoundBtn {
   margin-top: 20px;
 }
@@ -76,7 +146,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, 100px);
-  gap: 5px;
+  grid-gap: 5px;
 }
 
 .board-button {
@@ -122,4 +192,9 @@ p {
 }
 .modal button:hover {
   background-color: #0056B3;
+}
+
+footer {
+  text-align: center;
+  background-color: #bb6c5d;
 }
