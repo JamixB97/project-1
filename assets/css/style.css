@@ -37,9 +37,15 @@ nav {
 }
 
 .navbar-item {
+    padding: 0px 10px;
     font-size: 5rem;
     text-align: right;
     color: #344126;
+}
+
+.navbar-item:hover {
+  color: #fff;
+  background-color: #344126;
 }
 
 .row-toggle {
@@ -68,7 +74,7 @@ button {
   margin: 10px;
   padding: 10px;
   font-size: 20px;
-  background-color: #327529;
+  background-color: #bb6c5d;
   color: #344126;
   border: none;
   border-radius: 4px;
@@ -76,7 +82,8 @@ button {
 }
 
 button:hover {
-  background-color: #2d2506;
+  background-color: #344126;
+  color: #fff;
 }
 
 
