@@ -154,15 +154,15 @@ button:hover {
 .board button {
   padding: 40px;
   font-size: 24px;
-  background-color: #979797;
   border: 1px solid #ccc;
   cursor: pointer;
   border-radius: 4px;
-  transition: background-color 0.3s;
+ 
 }
 
 .board button:hover {
   background-color: var(--secondary-text);
+
 }
 
 #nextRoundBtn {
