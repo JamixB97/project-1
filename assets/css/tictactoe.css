@@ -30,6 +30,11 @@ body {
   font-family: Arial, sans-serif;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -70,7 +75,7 @@ body {
   background: var(--secondary-text);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px #fff;
+  box-shadow: 0 4px 8px #344126;
   width: 200px;
   text-align: center;
 }
