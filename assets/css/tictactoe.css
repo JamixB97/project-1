@@ -1,6 +1,24 @@
+:root{
+  --base-color: #f3b87b;
+  --base-variant: #e8e9ed;
+  --text-color: #bb6c5d;
+  --secondary-text: #344126;
+  --primary-color: #3a435d;
+  
+}
+.darkmode{
+  --base-color: #242938;
+  --base-variant: #a9b8f7;
+  --text-color: #082ff0;
+  --secondary-text: #889cf7;
+  --primary-color: #3a435d;
+  
+}
+
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f3b87b;
+  background-color: var(--base-color);
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -22,7 +40,7 @@ main {
   justify-content: space-between;
   align-items: right;
   padding: 10px 20px;
-  background-color: #bb6c5d;
+  background-color: var(--text-color);
   color: #fff;
 }
 
@@ -34,7 +52,7 @@ main {
 .navbar-item {
   font-size: 5rem;
   text-align: right;
-  color: #344126;
+  color: var(--secondary-text);
 }
 
 .nav-links li {
@@ -53,7 +71,8 @@ main {
 }
 
 .score-container {
-  background: #344126;
+  color: #fff;
+  background: var(--secondary-text);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px #fff;
@@ -77,13 +96,13 @@ h1 {
   text-align: center;
   font-size: 8rem ;
   
-  color: #bb6c5d;
+  color: var(--secondary-text);
   
 }
 
 h2{
   text-align: center;
-  color: #bb6c5d;
+  color: var(--text-color);
   font-weight: 100;
   font-size: 7rem;
 
@@ -91,7 +110,7 @@ h2{
 
 h3{
   text-align: center;
-  color: #344126;
+  color: var(--secondary-text);
   font-weight: 100;
   font-size: 5rem;
 
@@ -107,15 +126,16 @@ input[type="text"] {
 
 button {
   padding: 10px;
-  background-color: #f3b87b;
-  color: #344126;
+  background-color: var(--base-color);
+  color: var(--secondary-text);
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #2d2506;
+  background-color: var(--secondary-text);
+  color: #fff;
 }
 
 .board {
@@ -201,5 +221,35 @@ p {
 
 footer {
   text-align: center;
-  background-color: #bb6c5d;
+  background-color: var(--text-color);
+}
+
+#theme-switch{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  
+}
+#theme-switch svg{
+  fill: var(--primary-color);
+
+}
+
+ #theme-switch svg:last-child{
+  display: none;
+}
+
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+.darkmode #theme-switch svg:last-child{
+  display: block;
 }
