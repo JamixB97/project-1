@@ -1,5 +1,12 @@
 let darkmode = localStorage.getItem('darkmode');
 const themeSwitch = document.getElementById('theme-switch');
+//redirection function
+let redirectURL = '';
+
+const redirectPage = function (url) {
+  redirectURL = url;
+  location.assign(url);
+};
 
 const enableDarkmode = () => {
     document.body.classList.add('darkmode');
