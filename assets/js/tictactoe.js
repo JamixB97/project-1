@@ -7,7 +7,7 @@ const score1Element = document.getElementById("score1");
 const score2Element = document.getElementById("score2");
 const errorElement = document.getElementById("error");
 const startGameElement = document.getElementById("startGame");
-
+const backButton = document.getElementById('back');
 
 function startGame() {
     player1Name = document.getElementById('player1Name').value;
@@ -107,3 +107,7 @@ function closeModal() {
     initializeBoard();
     gameActive = true; // Optionally reset game state
 }
+
+backButton.addEventListener('click', function () {
+    redirectPage('./index.html');
+  });
