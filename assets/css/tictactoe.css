@@ -15,7 +15,6 @@
   
 }
 
-
 body {
   font-family: Arial, sans-serif;
   background-color: var(--base-color);
@@ -33,6 +32,9 @@ body {
 main {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 12px;
 }
 
 .navbar {
@@ -76,7 +78,7 @@ main {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px #344126;
-  width: 200px;
+  width: 640px;
   text-align: center;
 }
 
@@ -88,6 +90,7 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 640px;
   height: 640 px;
+  box-shadow: 0 4px 8px #344126;
   justify-content: center;
   align-items: center;
 }
@@ -141,6 +144,7 @@ button:hover {
 
 .board {
   display: grid;
+  padding-left: 70px;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin: 20px 0;
@@ -149,15 +153,15 @@ button:hover {
 .board button {
   padding: 40px;
   font-size: 24px;
-  background-color: #000000;
   border: 1px solid #ccc;
   cursor: pointer;
   border-radius: 4px;
-  transition: background-color 0.3s;
+ 
 }
 
 .board button:hover {
-  background-color: #62d6bd;
+  background-color: var(--secondary-text);
+
 }
 
 #nextRoundBtn {
@@ -209,15 +213,16 @@ p {
   margin: 0 0 15px;
 }
 .modal button {
-  background-color: #007BFF;
-  color: white;
+  background-color: var(--base-color);
+  color: var(--secondary-text);
   border: none;
   padding: 10px 15px;
   border-radius: 4px;
   cursor: pointer;
 }
 .modal button:hover {
-  background-color: #0056B3;
+  background-color: var(--secondary-text);
+  color: #fff;
 }
 
 footer {
