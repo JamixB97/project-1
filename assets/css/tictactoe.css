@@ -260,6 +260,7 @@ footer {
   display: block;
 }
 
+
 .flashing-text {
   animation: colorChange 1s infinite alternate; /* Adjust duration as needed */
 }
