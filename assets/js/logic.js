@@ -1,3 +1,5 @@
+let darkmode = localStorage.getItem('darkmode');
+const themeSwitch = document.getElementById('theme-switch');
 //redirection function
 let redirectURL = '';
 
@@ -6,24 +8,27 @@ const redirectPage = function (url) {
   location.assign(url);
 };
 
-// Access toggle switch HTML element
-const themeSwitcher = document.querySelector('#theme-switcher');
-const container = document.querySelector('.container');
-
-// Set default mode to dark
-let mode = 'dark';
-
-// Listen for a click event on toggle switch
-themeSwitcher.addEventListener('click', function () {
-  // If mode is dark, apply light background
-  if (mode === 'dark') {
-    mode = 'light';
-    container.setAttribute('class', 'light');
-  }
+const enableDarkmode = () => {
+    document.body.classList.add('darkmode');
+    localStorage.setItem('darkmode', 'active');
   
-  // If mode is light, apply dark background
-  else {
-    mode = 'dark';
-    container.setAttribute('class', 'dark');
-  }
+}
+
+const diableDarkmode = () => {
+    document.body.classList.remove('darkmode');
+    localStorage.setItem('darkmode', null);
+}
+
+if (darkmode === 'active') enableDarkmode();
+
+themeSwitch.addEventListener('click', () => {
+    darkmode = localStorage.getItem('darkmode');
+    if (darkmode !== 'active') {
+        enableDarkmode();
+    } else {
+        diableDarkmode();
+    }
 });
+    
+
+

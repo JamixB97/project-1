@@ -1,22 +1,72 @@
-body {
-background-color: #f3b87b
+:root{
+  --base-color: #f3b87b;
+  --base-variant: #e8e9ed;
+  --text-color: #bb6c5d;
+  --secondary-text: #344126;
+  --primary-color: #3a435d;
+  
+}
+.darkmode{
+  --base-color: #242938;
+  --base-variant: #a9b8f7;
+  --text-color: #082ff0;
+  --secondary-text: #889cf7;
+  --primary-color: #3a435d;
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  min-height: 100vh;
+  background-color: var(--base-color);
+  color:var(--text-color);
+}
+
+#theme-switch{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  
+}
+#theme-switch svg{
+  fill: var(--primary-color);
 
 }
 
+ #theme-switch svg:last-child{
+  display: none;
+}
 
-
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+.darkmode #theme-switch svg:last-child{
+  display: block;
+}
 
 h1 {
     text-align: center;
     font-size: 8rem ;
     
-    color: #bb6c5d;
+    color: var(--text-color);
     
 }
 
  h2{
     text-align: center;
-    color: #bb6c5d;
+    color: var(--text-color);
     font-weight: 100;
     font-size: 7rem;
 
@@ -24,15 +74,15 @@ h1 {
 
 h3{
     text-align: center;
-    color: #344126;
+    color: var(--secondary-text);
     font-weight: 100;
     font-size: 5rem;
 
 }
 
 nav {
-    background-color: #bb6c5d;
-    
+    background-color: var(--text-color);
+ 
     
 }
 
@@ -40,7 +90,7 @@ nav {
     padding: 0px 10px;
     font-size: 5rem;
     text-align: right;
-    color: #344126;
+    color: var(--secondary-text);
 }
 
 .navbar-item:hover {
@@ -61,7 +111,7 @@ p {
 
 section{
     text-align: center;
-    color: #344126;
+    color: var(--secondary-text);
 
 }
 
@@ -96,83 +146,14 @@ html {
     font-size: 62.5%;
 }
 
-/* Dark Mode */
-.dark{
-    background-color:#243447;
-    height: 100vh;
-    color: #bebebe
+.flashing-text {
+  animation: colorChange 1s infinite alternate; /* Adjust duration as needed */
 }
 
-.dark li a{
-    color: #bebebe;
+@keyframes colorChange {
+  50% { color: rgb(0, 255, 229); } /* Change colors as desired */
+  50% { color: rgb(255, 0, 195); }
+  100% { color: rgb(11, 245, 11); } 
 }
 
-.dark li a:hover{
-    color: #111;
-}
-
-
-
-
-/* Switch button */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
-  
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The Slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-
+ 
