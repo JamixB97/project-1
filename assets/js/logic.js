@@ -1,3 +1,10 @@
+//redirection function
+let redirectURL = '';
+
+const redirectPage = function (url) {
+  redirectURL = url;
+  location.assign(url);
+};
 
 // Access toggle switch HTML element
 const themeSwitcher = document.querySelector('#theme-switcher');
@@ -20,4 +27,3 @@ themeSwitcher.addEventListener('click', function () {
     container.setAttribute('class', 'dark');
   }
 });
-
