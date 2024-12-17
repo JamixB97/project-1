@@ -120,9 +120,9 @@ html {
 }
 
 @keyframes colorChange {
-  0% { color: red; } /* Change colors as desired */
-  50% { color: blue; }
-  100% { color: green; } 
+  50% { color: rgb(0, 255, 229); } /* Change colors as desired */
+  50% { color: rgb(255, 0, 195); }
+  100% { color: rgb(11, 245, 11); } 
 }
 
  
