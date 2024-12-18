@@ -241,7 +241,7 @@ footer {
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 1;
+  
 }
 #theme-switch svg{
   fill: var(--primary-color);
@@ -258,7 +258,6 @@ footer {
 .darkmode #theme-switch svg:last-child{
   display: block;
 }
-
 
 .flashing-text {
   animation: colorChange 1s infinite alternate; /* Adjust duration as needed */
