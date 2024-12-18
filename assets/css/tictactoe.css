@@ -227,6 +227,9 @@ p {
 footer {
   text-align: center;
   background-color: var(--text-color);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 #theme-switch{

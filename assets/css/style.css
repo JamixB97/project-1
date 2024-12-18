@@ -54,11 +54,13 @@ body{
 }
 
 h1 {
-    text-align: center;
-    font-size: 8rem ;
-    
-    color: var(--text-color);
-    
+  
+  text-align: center;
+  font-size: 128px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: var(--secondary-text);
+  
 }
 
  h2{
@@ -87,6 +89,7 @@ h4{
 
 nav {
     background-color: var(--text-color);
+    padding: 10px 20px;
  
     
 }
