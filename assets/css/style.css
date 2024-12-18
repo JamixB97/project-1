@@ -54,7 +54,8 @@ body{
 }
 
 h1 {
-  
+  display: flex;
+  justify-content: center;
   text-align: center;
   font-size: 128px;
   font-family: Arial, sans-serif;
@@ -162,3 +163,9 @@ html {
 }
 
  
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 70px;
+  }
+  
+}

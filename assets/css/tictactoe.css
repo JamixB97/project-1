@@ -76,7 +76,8 @@ main {
   color: #fff;
   background: var(--secondary-text);
   padding: 20px;
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   box-shadow: 0 4px 8px #344126;
   width: 640px;
   text-align: center;
@@ -86,19 +87,19 @@ main {
   text-align: center;
   background: #fff;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   width: 640px;
-  height: 640 px;
   box-shadow: 0 4px 8px #344126;
   justify-content: center;
   align-items: center;
 }
 
 h1 {
+  display: flex;
+  justify-content: center;
   text-align: center;
   font-size: 8rem ;
-  
   color: var(--secondary-text);
   
 }
@@ -163,10 +164,6 @@ button:hover {
 
 }
 
-#nextRoundBtn {
-  margin-top: 20px;
-}
-
 p {
   font-size: 18px;
 }
@@ -208,7 +205,7 @@ p {
   max-width: 400px;
   width: 90%;
 }
-.modal h2 {
+.modal h3 {
   margin: 0 0 15px;
 }
 .modal button {
@@ -227,7 +224,7 @@ p {
 footer {
   text-align: center;
   background-color: var(--text-color);
-  position:relative;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
@@ -244,6 +241,7 @@ footer {
   position: fixed;
   top: 20px;
   right: 20px;
+  z-index: 1;
   
 }
 #theme-switch svg{
@@ -270,4 +268,23 @@ footer {
   50% { color: rgb(0, 255, 229); } /* Change colors as desired */
   50% { color: rgb(255, 0, 195); }
   100% { color: rgb(11, 245, 11); } 
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 70px;
+  }
+  
+  .score-container {
+   width: 400px;
+  }
+  
+  .game-container {
+    width: 400px;
+  }
+
+  .board {
+    padding-left: 10px;
+  }
+
 }
