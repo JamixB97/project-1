@@ -35,7 +35,7 @@ body{
   position: fixed;
   top: 20px;
   right: 20px;
-  
+  z-index: 1;
 }
 #theme-switch svg{
   fill: var(--primary-color);
@@ -106,11 +106,7 @@ nav {
   background-color: var(--secondary-text);
 }
 
-.row-toggle {
-  float: right;
-  color: #344126;
 
-}
 
 p {
     font-size: 2.5rem
