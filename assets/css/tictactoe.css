@@ -90,16 +90,16 @@ main {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   width: 640px;
-  height: 640 px;
   box-shadow: 0 4px 8px #344126;
   justify-content: center;
   align-items: center;
 }
 
 h1 {
+  display: flex;
+  justify-content: center;
   text-align: center;
   font-size: 8rem ;
-  
   color: var(--secondary-text);
   
 }
@@ -164,10 +164,6 @@ button:hover {
 
 }
 
-#nextRoundBtn {
-  margin-top: 20px;
-}
-
 p {
   font-size: 18px;
 }
@@ -228,7 +224,7 @@ p {
 footer {
   text-align: center;
   background-color: var(--text-color);
-  position:relative;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
@@ -272,4 +268,23 @@ footer {
   50% { color: rgb(0, 255, 229); } /* Change colors as desired */
   50% { color: rgb(255, 0, 195); }
   100% { color: rgb(11, 245, 11); } 
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 70px;
+  }
+  
+  .score-container {
+   width: 400px;
+  }
+  
+  .game-container {
+    width: 400px;
+  }
+
+  .board {
+    padding-left: 10px;
+  }
+
 }
