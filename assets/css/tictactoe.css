@@ -76,7 +76,8 @@ main {
   color: #fff;
   background: var(--secondary-text);
   padding: 20px;
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   box-shadow: 0 4px 8px #344126;
   width: 640px;
   text-align: center;
@@ -86,8 +87,8 @@ main {
   text-align: center;
   background: #fff;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   width: 640px;
   height: 640 px;
   box-shadow: 0 4px 8px #344126;
@@ -244,6 +245,7 @@ footer {
   position: fixed;
   top: 20px;
   right: 20px;
+  z-index: 1;
   
 }
 #theme-switch svg{
